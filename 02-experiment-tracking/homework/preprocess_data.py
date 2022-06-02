@@ -14,21 +14,21 @@ def dump_pickle(obj, filename):
 def read_dataframe(filename: str):
     df = pd.read_parquet(filename)
 
-    df['duration'] = df.lpep_dropoff_datetime - df.lpep_pickup_datetime
+    df["duration"] = df.lpep_dropoff_datetime - df.lpep_pickup_datetime
     df.duration = df.duration.apply(lambda td: td.total_seconds() / 60)
     df = df[(df.duration >= 1) & (df.duration <= 60)]
 
-    categorical = ['PULocationID', 'DOLocationID']
+    categorical = ["PULocationID", "DOLocationID"]
     df[categorical] = df[categorical].astype(str)
 
     return df
 
 
 def preprocess(df: pd.DataFrame, dv: DictVectorizer, fit_dv: bool = False):
-    df['PU_DO'] = df['PULocationID'] + '_' + df['DOLocationID']
-    categorical = ['PU_DO']
-    numerical = ['trip_distance']
-    dicts = df[categorical + numerical].to_dict(orient='records')
+    df["PU_DO"] = df["PULocationID"] + "_" + df["DOLocationID"]
+    categorical = ["PU_DO"]
+    numerical = ["trip_distance"]
+    dicts = df[categorical + numerical].to_dict(orient="records")
     if fit_dv:
         X = dv.fit_transform(dicts)
     else:
@@ -49,7 +49,7 @@ def run(raw_data_path: str, dest_path: str, dataset: str = "green"):
     )
 
     # extract the target
-    target = 'duration'
+    target = "duration"
     y_train = df_train[target].values
     y_valid = df_valid[target].values
     y_test = df_test[target].values
@@ -70,16 +70,15 @@ def run(raw_data_path: str, dest_path: str, dataset: str = "green"):
     dump_pickle((X_test, y_test), os.path.join(dest_path, "test.pkl"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--raw_data_path",
-        help="the location where the raw NYC taxi trip data was saved"
+        help="the location where the raw NYC taxi trip data was saved",
     )
     parser.add_argument(
-        "--dest_path",
-        help="the location where the resulting files will be saved."
+        "--dest_path", help="the location where the resulting files will be saved."
     )
     args = parser.parse_args()
 
