@@ -1,7 +1,7 @@
 # MLOps Zoomcamp
 
 <p align="center">
-  <a href="https://datatalks.club" target="_blank">
+  <a href="https://www.youtube.com/watch?v=3T5kUA3eWWc&list=PL3MmuxUbc_hIUISrluw_A7wDSmfOhErJK" target="_blank">
     <img src="images/banner.png">
   </a>
 </p>
@@ -14,8 +14,10 @@ Our MLOps Zoomcamp course
 - Join the [`#course-mlops-zoomcamp`](https://app.slack.com/client/T01ATQK62F8/C02R98X7DS9) channel
 - [Tweet about the course!](https://ctt.ac/fH67W)
 - Subscribe to the [public Google calendar](https://calendar.google.com/calendar/?cid=M3Jzbmg0ZDA2aHVsY2M1ZjcyNDJtODNyMTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) (subscription works from desktop only)
-- [Youtube Playlist with all the videos](https://www.youtube.com/playlist?list=PL3MmuxUbc_hIUISrluw_A7wDSmfOhErJK)
+- Start watching course videos! [Course playlist](https://www.youtube.com/playlist?list=PL3MmuxUbc_hIUISrluw_A7wDSmfOhErJK)
 - [Technical FAQ](https://docs.google.com/document/d/12TlBfhIiKtyBv8RnsoJR6F72bkPDGEvPOItJIxaEzE0/edit) 
+- For announcements, join our [Telegram channel](https://t.me/dtc_courses)
+- [Leaderboard](https://docs.google.com/spreadsheets/d/e/2PACX-1vRhinTR4Gpxcud-xX0cPBVqboO8RE5gFY7W2dfgfhzECuPFOaCoo9TVWUTxxrSmzvbZY0D-N1vai8RN/pubhtml)
 
 
 ## Overview
@@ -41,6 +43,15 @@ Data scientists and ML engineers. Also software engineers and data engineers int
 Course start: 16 of May
 
 
+### Asking for help in Slack
+
+The best way to get support is to use [DataTalks.Club's Slack](https://datatalks.club/slack.html). Join the [`#course-mlops-zoomcamp`](https://app.slack.com/client/T01ATQK62F8/C02R98X7DS9) channel.
+
+To make discussions in Slack more organized:
+
+* Follow [these recommendations](asking-questions.md) when asking for help
+* Read the [DataTalks.Club community guidelines](https://datatalks.club/slack/guidelines.html)
+
 ## Syllabus
 
 This is a draft and will change. 
@@ -58,7 +69,7 @@ This is a draft and will change.
 
 [More details](01-intro)
 
-### Module 2: Experiment tracking
+### [Module 2: Experiment tracking and model management](02-experiment-tracking)
 
 * Experiment tracking intro
 * Getting started with MLflow
@@ -68,14 +79,18 @@ This is a draft and will change.
 * MLflow in practice
 * Homework
 
+[More details](02-experiment-tracking)
 
-### Module 3: Orchestration and ML Pipelines
 
-* ML Pipelines: introduction
-* Prefect
+### [Module 3: Orchestration and ML Pipelines](03-orchestration)
+
+* Workflow orchestration
+* Prefect 2.0
 * Turning a notebook into a pipeline
-* Kubeflow Pipelines
-* Homework 
+* Deployment of Prefect flow
+* Homework
+
+[More details](03-orchestration)
 
 
 ### Module 4: Model Deployment 
@@ -184,7 +199,17 @@ No and yes. There will be two parts:
 * Office hours: Live on Mondays (17:00 CET), but recorded, so you can watch later.
 
 
-## Partners
+## Supporters and partners
+
+Thanks to the course sponsors for making it possible to create this course
+
+<p align="center">
+  <a href="https://www.prefect.io/">
+    <img height="100" src="images/prefect.png">
+  </a>
+</p>
+
+
 
 Thanks to our friends for spreading the word about the course
 
@@ -194,5 +219,11 @@ Thanks to our friends for spreading the word about the course
   </a>
   <a href="https://www.confetti.ai/">
     <img height="75" src="https://datatalks.club/images/partners/confetti.png">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://mlopsworld.com/">
+    <img height="75" src="images/mlops-world.png">
   </a>
 </p>
