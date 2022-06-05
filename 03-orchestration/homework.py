@@ -49,8 +49,8 @@ def run_model(df, categorical, dv, lr):
     print(f"The MSE of validation is: {mse}")
     return
 
-def main(train_path: str = './data/fhv_tripdata_2021-06.parquet', 
-           val_path: str = './data/fhv_tripdata_2021-07.parquet'):
+def main(train_path: str = './data/fhv_tripdata_2021-01.parquet', 
+           val_path: str = './data/fhv_tripdata_2021-02.parquet'):
 
     categorical = ['PUlocationID', 'DOlocationID']
 
@@ -58,7 +58,7 @@ def main(train_path: str = './data/fhv_tripdata_2021-06.parquet',
     df_train_processed = prepare_features(df_train, categorical)
 
     df_val = read_data(val_path)
-    df_val_processed = prepare_features(df_val, categorical)
+    df_val_processed = prepare_features(df_val, categorical, False)
 
     # train the model
     lr, dv = train_model(df_train_processed, categorical)
