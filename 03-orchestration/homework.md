@@ -4,7 +4,7 @@ The goal of this homework is to familiarize users with workflow orchestration. W
 
 https://github.com/DataTalksClub/mlops-zoomcamp/blob/main/01-intro/homework.ipynb
 
-This has already been converted to a script called `homework.py` in the `03-orchestration` folder of this repo. 
+This has already been converted to a script called `homework.py` in the `03-orchestration` folder of this repo.
 
 You will use the FHV dataset like in homework 1.
 
@@ -56,10 +56,7 @@ python homework.py
 
 We want to bring this to workflow orchestration to add observability around it. The `main` function will be converted to a `flow` and the other functions will be `tasks`. After adding all of the decorators, there is actually one task that you will need to call `.result()` for inside the `flow` to get it to work. Which task is this?
 
-* `read_data`
-* `prepare_features`
 * `train_model`
-* `run_model`
 
 Important: change all `print` statements to use the Prefect logger. Using the `print` statement will not appear in the Prefect UI. You have to call `get_run_logger` at the start of the task to use it.
 
@@ -113,12 +110,9 @@ By setting up the logger from the previous step, we should see some logs about o
 
 Note you need to download the relevant files to run. Part of this question is understanding which files the flow should be looking for.
 
-The valition MSE is:
+The validation MSE is:
 
 * 11.637
-* 11.837
-* 12.037
-* 12.237
 
 ## Q3. Saving the model and artifacts
 
@@ -137,10 +131,7 @@ We could do something like `sorted(model_list, reverse=False)[0]` to get the fil
 
 What is the file size of the `DictVectorizer` that we trained when the `date` is 2021-08-15?
 
-* 13,000 bytes 
-* 23,000 bytes 
-* 33,000 bytes 
-* 43,000 bytes 
+* 13,000 bytes
 
 You can bring up the Orion UI and see the work you've been doing. If you are using local Orion, you can start the server with:
 
@@ -160,32 +151,26 @@ For this exercise, use a `CronSchedule` when creating a Prefect deployment.
 
 What is the Cron expression to run a flow at 9 AM every 15th of the month?
 
-* `* * 15 9 0`
-* `9 15 * * *`
 * `0 9 15 * *`
-* `0 15 9 1 *`
 
 Hint: there are many Cron to English tools. Try looking for one to help you.
 
 Create a deployment with `prefect deployment create` after you write your `DeploymentSpec`
 
 
-## Q5. Viewing the Deployment 
+## Q5. Viewing the Deployment
 
-View the deployment in the UI. When first loading, we may not see that many flows because the default filter is 1 day back and 1 day forward. Remove the filter for 1 day forward to see the scheduled runs. 
+View the deployment in the UI. When first loading, we may not see that many flows because the default filter is 1 day back and 1 day forward. Remove the filter for 1 day forward to see the scheduled runs.
 
 How many flow runs are scheduled by Prefect in advanced? You should not be counting manually. There is a number of upcoming runs on the top right of the dashboard.
 
-* 0
 * 3
-* 10
-* 25
 
 ## Q6. Creating a work-queue
 
-In order to run this flow, you will need an agent and a work queue. Because we scheduled our flow or every month, it won't really get picked up by an agent. For this exercise, create a work-queue from the UI and view it using the CLI. 
+In order to run this flow, you will need an agent and a work queue. Because we scheduled our flow or every month, it won't really get picked up by an agent. For this exercise, create a work-queue from the UI and view it using the CLI.
 
-For all CLI commands with Prefect, you can use `--help` to get more information. 
+For all CLI commands with Prefect, you can use `--help` to get more information.
 
 For example,
 * `prefect --help`
@@ -193,10 +178,7 @@ For example,
 
 What is the command to view the available work-queues?
 
-* `prefect work-queue inspect`
 * `prefect work-queue ls`
-* `prefect work-queue preview`
-* `prefect work-queue list`
 
 
 
