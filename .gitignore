@@ -1,5 +1,16 @@
 data/
 .ipynb_checkpoints
 .bin
-*.parquet
 *.db
+
+*.parquet
+*.html
+*.csv
+
+.venv
+venv
+.idea
+**/artifacts/
+**/models/
+
+__pycache__/
