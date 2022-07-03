@@ -15,11 +15,7 @@ Run this notebook for the February 2021 FVH data.
 
 What's the mean predicted duration for this dataset?
 
-* 11.19
 * 16.19
-* 21.19
-* 26.19
-
 
 ## Q2. Preparing the output
 
@@ -46,10 +42,7 @@ df_result.to_parquet(
 
 What's the size of the output file?
 
-* 9M
 * 19M
-* 29M
-* 39M
 
 Make sure you use the snippet above for saving the file. It should contain only these two columns. For this question, don't change the
 dtypes of the columns and use pyarrow, not fastparquet. 
@@ -85,10 +78,7 @@ Run the script for March 2021.
 
 What's the mean predicted duration? 
 
-* 11.29
 * 16.29
-* 21.29
-* 26.29
 
 Hint: just add a print statement to your script.
 
@@ -131,9 +121,6 @@ for April 2021?
 
 
 * 9.96
-* 16.55
-* 25.96
-* 36.55
 
 
 ## Bonus: upload the result to the cloud (Not graded)
